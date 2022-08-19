@@ -13,8 +13,8 @@ jobs:
       run: npm run build
 
     - name: Tar files
-      run: tar -cvf next.tar ./next
-
+      run: tar -cvf next.tar .next/
+      
     - name: Upload static site content
       uses: actions/upload-artifact@v3
       with:
