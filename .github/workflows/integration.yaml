@@ -2,8 +2,11 @@ name: Build next.js
 on: push
 jobs:
   build-project:
+    strategy:
+      matrix:
+        platform: [ubuntu-latest, macos-latest, windows-latest]
     name: Build project
-    runs-on: ubuntu-latest
+    runs-on: ${{matrix.platform}}
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
