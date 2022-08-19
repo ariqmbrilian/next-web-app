@@ -27,6 +27,6 @@ jobs:
         name: static-site
     - name: Archive site content
       uses: thedoctor0/zip-release@main
-        with:
-          filename: 'release.zip'
+      with:
+        filename: site.zip
   
